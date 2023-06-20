@@ -7,6 +7,11 @@ const pay = (req, res) => {
 
 
 	console.log("Inside bid.js");
+
+
+	try {
+		
+
 	Insta.setKeys(process.env.INSTA_TEST_API_KEY, process.env.INSTA_TEST_AUTH_KEY);
 
 	const data = new Insta.PaymentData();
@@ -62,6 +67,10 @@ const pay = (req, res) => {
 		}
 	});
 
+} catch (error) {
+		res.json("some error occurred in route api/bid/pay") ; 
+}
+
 }
 
 const callback = async (req, res) => {
@@ -98,7 +107,7 @@ const callback = async (req, res) => {
 
 			// console.log(doc)  ; 
 
-			res.redirect('http://localhost:5000/api/bid/afterthere');
+			res.redirect('/api/bid/afterthere');
 		}
 
 
@@ -110,7 +119,7 @@ const callback = async (req, res) => {
 
 const afterthere =  (req, res) => {
 	alert("Your Payment Is Successful ! We will reach out to you very soon !")
-	res.redirect("http://localhost:5500/index.html");
+	res.redirect("https://newpaf.peakandfind.com/index.html");
 }
 
 

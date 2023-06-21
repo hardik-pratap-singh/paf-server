@@ -12,10 +12,10 @@ const pay = (req, res) => {
 	try {
 		
 
-	Insta.setKeys(process.env.INSTA_TEST_API_KEY, process.env.INSTA_TEST_AUTH_KEY);
+	Insta.setKeys(process.env.INSTA_API_KEY, process.env.INSTA_AUTH_KEY);
 
 	const data = new Insta.PaymentData();
-	Insta.isSandboxMode(true);
+	Insta.isSandboxMode(false);
 
 	data.purpose = req.body.purpose;
 	data.amount = req.body.amount;

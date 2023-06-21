@@ -32,8 +32,8 @@ router.post("/contactus", [
 
         var mailOptions = {
             from: 'nodemailer5901@gmail.com',
-            // to:'peakandfind2021@gmail.com' ,
-            to: 'hardikjanuary2021@gmail.com',
+            to:'peakandfind2021@gmail.com' ,
+            // to: 'hardikjanuary2021@gmail.com',
             subject: `${name} Wants to Connect`,
             html: `<div className="block">
                 <h3>Name : ${name} </h3>

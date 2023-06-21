@@ -119,7 +119,7 @@ const callback = async (req, res) => {
 
 const afterthere =  (req, res) => {
 	alert("Your Payment Is Successful ! We will reach out to you very soon !")
-	res.redirect("https://newpaf.peakandfind.com/index.html");
+	res.redirect("https://peakandfind.com/index.html");
 }
 
 
